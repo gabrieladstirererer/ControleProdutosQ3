@@ -10,7 +10,9 @@ namespace ControleProdutosQ3.Controllers
 
         public HomeController(ILogger<HomeController> logger)
         {
-            _logger = logger;
+
+            _logger = logger; 
+
         }
 
         public IActionResult Index()
@@ -20,6 +22,8 @@ namespace ControleProdutosQ3.Controllers
 
         public IActionResult Privacy()
         {
+           
+          
             return View();
         }
 

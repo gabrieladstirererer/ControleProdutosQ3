@@ -1,0 +1,40 @@
+﻿@model List<ProdutoModel>
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+<div class="text-center">
+    <div>
+        <a class="btn btn-success" role="button" asp-controller="Po"
+        <h2>Listar Produtos</h2>
+    </div>
+    <table class="table caption-top">
+        <caption>Lista de Produtos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Foto</th>
+                <th scope="col">Id</th>
+                <th scope="col">Código de Barras</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Data de validade</th>
+        <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (ProdutoModel produto in Model)
+                        {
+                    <tr class="align-baseline">
+                        <td>@produto.Id</td>
+                        <td>@produto.CodigoDeBarras</td>
+                        <td>@produto.Descricao</td>
+                        <td>@produto.DataValidade.ToString("dd/MM/yyyy")</td>
+                        <td>@produto.DataDeRegistro.ToString("dd/MM/yyyy")</td>
+                        <td>@produto.Quantidade</td>
+                        <td>@produto.Valor.ToString("F2")</td>
+                        <td>@produto.Ativo</td>
+
+                    </tr>
+                        }
+                    }
+        </tbody>
+    </table>
+</div>
