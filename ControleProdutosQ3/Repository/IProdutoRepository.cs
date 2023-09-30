@@ -7,7 +7,7 @@ namespace ControleProdutosQ3.Repository
        Task<List<ProdutoModel>>BuscarTodos();
        Task<ProdutoModel> Adicionar(ProdutoModel produto);
 
-
+        Task<ProdutoModel> Remover();
        
     }
 }

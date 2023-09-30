@@ -5,7 +5,7 @@
 
 <div class="text-center">
     <div>
-        <a class="btn btn-success" role="button" asp-controller="Po"
+        @* <a class="btn btn-success" role="button" asp-controller="Po" *@
         <h2>Listar Produtos</h2>
     </div>
     <table class="table caption-top">
@@ -26,7 +26,7 @@
                         <td>@produto.Id</td>
                         <td>@produto.CodigoDeBarras</td>
                         <td>@produto.Descricao</td>
-                        <td>@produto.DataValidade.ToString("dd/MM/yyyy")</td>
+                        @* <td>@produto.DataValidade.ToString("dd/MM/yyyy")</td> *@
                         <td>@produto.DataDeRegistro.ToString("dd/MM/yyyy")</td>
                         <td>@produto.Quantidade</td>
                         <td>@produto.Valor.ToString("F2")</td>

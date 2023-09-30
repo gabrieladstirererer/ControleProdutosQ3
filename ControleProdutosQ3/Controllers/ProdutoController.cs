@@ -18,7 +18,6 @@ namespace ControleProdutosQ3.Controllers
         public async Task<IActionResult> Index()
         {
             List<ProdutoModel> produto = await _produtoRepository.BuscarTodos();
-           
             ViewBag.Produtos = "Outros Produtos";
 
             return await Task.FromResult(View(produto));
@@ -51,3 +50,4 @@ namespace ControleProdutosQ3.Controllers
         }
     }
 }
+

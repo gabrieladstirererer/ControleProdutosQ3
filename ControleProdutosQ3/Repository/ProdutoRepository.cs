@@ -26,9 +26,11 @@ namespace ControleProdutosQ3.Repository
            
         }
 
-        public async Task< List<ProdutoModel>> BuscarTodos()
+        public async Task<List<ProdutoModel>> BuscarTodos()
         {
            return await _bancoContext.Produto.ToListAsync();
         }
+
+        
     }
 }
